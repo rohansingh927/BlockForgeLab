@@ -41,15 +41,11 @@ const Home = () => {
               At BlockForgeLab, we design and develop cutting-edge blockchain solutions that transform businesses through decentralized technology, creating secure, transparent, and efficient ecosystems.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="/services">
-                <a className="bg-secondary hover:bg-opacity-90 text-white px-8 py-3 rounded-md font-montserrat font-medium text-center transition-all">
-                  Explore Services
-                </a>
+              <Link href="/services" className="bg-secondary hover:bg-opacity-90 text-white px-8 py-3 rounded-md font-montserrat font-medium text-center transition-all inline-block">
+                Explore Services
               </Link>
-              <Link href="/contact">
-                <a className="bg-transparent border-2 border-white hover:bg-white hover:text-primary px-8 py-3 rounded-md font-montserrat font-medium text-center transition-all">
-                  Contact Us
-                </a>
+              <Link href="/contact" className="bg-transparent border-2 border-white hover:bg-white hover:text-primary px-8 py-3 rounded-md font-montserrat font-medium text-center transition-all inline-block">
+                Contact Us
               </Link>
             </div>
           </motion.div>
@@ -87,10 +83,8 @@ const Home = () => {
           </div>
           
           <div className="mt-12 text-center">
-            <Link href="/services">
-              <a className="inline-flex items-center font-montserrat font-medium text-primary hover:text-secondary transition-colors">
-                View All Services <ChevronRight className="ml-1 h-4 w-4" />
-              </a>
+            <Link href="/services" className="inline-flex items-center font-montserrat font-medium text-primary hover:text-secondary transition-colors">
+              View All Services <ChevronRight className="ml-1 h-4 w-4" />
             </Link>
           </div>
         </div>
@@ -132,10 +126,8 @@ const Home = () => {
                   <p className="text-gray-600">Years Experience</p>
                 </div>
               </div>
-              <Link href="/contact">
-                <a className="inline-block bg-primary hover:bg-opacity-90 text-white px-8 py-3 rounded-md font-montserrat font-medium transition-all">
-                  Get In Touch
-                </a>
+              <Link href="/contact" className="inline-block bg-primary hover:bg-opacity-90 text-white px-8 py-3 rounded-md font-montserrat font-medium transition-all">
+                Get In Touch
               </Link>
             </motion.div>
             <motion.div 
@@ -218,10 +210,8 @@ const Home = () => {
           </div>
           
           <div className="mt-12 text-center">
-            <Link href="/portfolio">
-              <a className="inline-flex items-center font-montserrat font-medium text-primary hover:text-secondary transition-colors">
-                View All Projects <ChevronRight className="ml-1 h-4 w-4" />
-              </a>
+            <Link href="/portfolio" className="inline-flex items-center font-montserrat font-medium text-primary hover:text-secondary transition-colors">
+              View All Projects <ChevronRight className="ml-1 h-4 w-4" />
             </Link>
           </div>
         </div>
@@ -253,10 +243,8 @@ const Home = () => {
             <TestimonialCard testimonial={testimonials[0]} />
             
             <div className="mt-8 text-center">
-              <Link href="/testimonials">
-                <a className="inline-flex items-center font-montserrat font-medium text-white hover:text-secondary transition-colors">
-                  Read More Testimonials <ChevronRight className="ml-1 h-4 w-4" />
-                </a>
+              <Link href="/testimonials" className="inline-flex items-center font-montserrat font-medium text-white hover:text-secondary transition-colors">
+                Read More Testimonials <ChevronRight className="ml-1 h-4 w-4" />
               </Link>
             </div>
           </motion.div>
