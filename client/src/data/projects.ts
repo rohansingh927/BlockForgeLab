@@ -4,14 +4,14 @@ export const projects = [
     title: "DeFi Lending Platform",
     description: "A decentralized finance platform enabling peer-to-peer lending and borrowing with automated interest rates and collateral management.",
     category: "finance",
-    image: "https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
+    image: "https://images.unsplash.com/photo-1480944657103-7fed22359e1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
   },
   {
     id: 2,
     title: "Transparent Supply Chain",
     description: "Blockchain-based supply chain tracking system providing end-to-end visibility and provenance verification for global logistics.",
     category: "supply-chain",
-    image: "https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
+    image: "https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
   },
   {
     id: 3,
@@ -46,7 +46,7 @@ export const projects = [
     title: "Tokenized Real Estate",
     description: "Platform for fractional ownership of real estate properties through tokenization, enabling broader market participation and liquidity.",
     category: "finance",
-    image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1473&q=80"
+    image: "https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1473&q=80"
   },
   {
     id: 8,

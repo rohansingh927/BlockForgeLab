@@ -9,7 +9,7 @@ const Testimonials = () => {
       {/* Hero Section */}
       <section 
         className="relative pt-32 pb-20 bg-cover bg-center" 
-        style={{ backgroundImage: "url('https://images.unsplash.com/photo-1560179707-f14e90ef3623?ixlib=rb-4.0.3&auto=format&fit=crop&w=2073&q=80')" }}
+        style={{ backgroundImage: "url('https://images.unsplash.com/photo-1512295767273-ac109ac3acfa?ixlib=rb-4.0.3&auto=format&fit=crop&w=2073&q=80')" }}
       >
         <div className="absolute inset-0 bg-primary opacity-80"></div>
         <div className="container mx-auto px-4 relative z-10">
@@ -118,19 +118,19 @@ const Testimonials = () => {
                 title: "Financial Institution Reduces Fraud by 62%",
                 category: "Finance",
                 description: "Implementation of a blockchain-based verification system for a leading financial services company resulted in significant fraud reduction and compliance improvement.",
-                image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
+                image: "https://images.unsplash.com/photo-1515265705-cbcc6e6ba264?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
               },
               {
                 title: "Supply Chain Transparency Transformation",
                 category: "Supply Chain",
                 description: "Developed an end-to-end tracking solution for a global manufacturing company, enhancing transparency and reducing shipping disputes by 47%.",
-                image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
+                image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
               },
               {
                 title: "Healthcare Data Security Overhaul",
                 category: "Healthcare",
                 description: "Created a secure blockchain infrastructure for patient data management, improving data access speed by 78% while maintaining HIPAA compliance.",
-                image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
+                image: "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
               }
             ].map((caseStudy, index) => (
               <motion.div 

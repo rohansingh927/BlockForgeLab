@@ -68,7 +68,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-montserrat font-bold text-lg">Our Location</h4>
-                    <p className="opacity-90">123 Blockchain Boulevard, Tech Hub, San Francisco, CA 94107</p>
+                    <p className="opacity-90">Al Reem Island, Abu Dhabi, UAE</p>
                   </div>
                 </div>
                 <div className="flex items-start mb-6">
@@ -86,7 +86,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-montserrat font-bold text-lg">Call Us</h4>
-                    <p className="opacity-90">+1 0</p>
+                    <p className="opacity-90">+971 00000000</p>
                   </div>
                 </div>
                 <div className="flex items-start mb-10">
@@ -134,7 +134,7 @@ const Contact = () => {
           >
             <h2 className="font-montserrat font-bold text-4xl mb-4">Visit Our Office</h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Our headquarters is located in the heart of San Francisco's tech district. We'd love to meet you in person.
+              Our headquarters is located in the heart of Abu Dhabi's business district. We'd love to meet you in person.
             </p>
           </motion.div>
           
@@ -151,7 +151,7 @@ const Contact = () => {
                 <br />
                 <span className="font-montserrat font-medium">Interactive Map Placeholder</span>
                 <br />
-                123 Blockchain Boulevard, Tech Hub, San Francisco, CA 94107
+                Al Reem Island, Abu Dhabi, UAE
               </p>
             </div>
           </motion.div>
