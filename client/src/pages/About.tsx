@@ -47,7 +47,7 @@ const About = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="font-montserrat font-bold text-4xl mb-6">Our Story</h2>
+              <h2 className="font-montserrat font-bold text-4xl mb-6 text-black">Our Story</h2>
               <p className="text-lg text-gray-600 mb-4">
                 Founded in 2018, BlockForgeLab emerged from a collective vision to demystify blockchain technology and make it accessible to businesses of all sizes. Our founders, experienced technologists and entrepreneurs, recognized the transformative potential of blockchain beyond cryptocurrencies.
               </p>
@@ -137,7 +137,7 @@ const About = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="font-montserrat font-bold text-4xl mb-4">Our Core Values</h2>
+            <h2 className="font-montserrat font-bold text-4xl mb-4 text-black">Our Core Values</h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               These principles guide our work and shape our company culture.
             </p>
@@ -177,7 +177,7 @@ const About = () => {
                 <div className="w-16 h-16 rounded-full bg-primary bg-opacity-10 flex items-center justify-center mb-6 mx-auto">
                   <i className={`${value.icon} text-white text-2xl`}></i>
                 </div>
-                <h3 className="font-montserrat font-bold text-xl mb-3">{value.title}</h3>
+                <h3 className="font-montserrat font-bold text-xl mb-3 text-black">{value.title}</h3>
                 <p className="text-gray-600">
                   {value.description}
                 </p>

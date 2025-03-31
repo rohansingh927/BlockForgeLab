@@ -273,7 +273,7 @@ const Home = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="font-montserrat font-bold text-4xl mb-4">Get In Touch</h2>
+            <h2 className="font-montserrat font-bold text-4xl mb-4 text-black">Get In Touch</h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               Have a blockchain project in mind? Contact our team for a consultation and discover how we can help transform your business.
             </p>
@@ -304,7 +304,7 @@ const Home = () => {
                   </div>
                   <div>
                     <h4 className="font-montserrat font-bold text-lg">Our Location</h4>
-                    <p className="opacity-90">123 Blockchain Boulevard, Tech Hub, San Francisco, CA 94107</p>
+                    <p className="opacity-90">Abu Dhabi, UAE</p>
                   </div>
                 </div>
                 <div className="flex items-start mb-6">
@@ -322,7 +322,7 @@ const Home = () => {
                   </div>
                   <div>
                     <h4 className="font-montserrat font-bold text-lg">Call Us</h4>
-                    <p className="opacity-90">+1 0</p>
+                    <p className="opacity-90">+971 000 000 000</p>
                   </div>
                 </div>
                 <div className="flex items-start mb-10">

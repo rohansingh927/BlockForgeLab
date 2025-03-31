@@ -37,7 +37,7 @@ const Services = () => {
       </section>
 
       {/* Services List */}
-      <section className="py-20 bg-light">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <motion.div 
             className="text-center mb-16"
@@ -46,7 +46,7 @@ const Services = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="font-montserrat font-bold text-4xl mb-4">Our Blockchain Services</h2>
+            <h2 className="font-montserrat font-bold text-4xl mb-4 text-black">Our Blockchain Services</h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               We provide tailored blockchain solutions to meet your specific business needs, from strategy development to implementation and ongoing support.
             </p>
@@ -79,7 +79,7 @@ const Services = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="font-montserrat font-bold text-4xl mb-4">Our Service Process</h2>
+            <h2 className="font-montserrat font-bold text-4xl mb-4 text-black">Our Service Process</h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               We follow a structured approach to deliver blockchain solutions that align with your business objectives and technical requirements.
             </p>
@@ -110,7 +110,7 @@ const Services = () => {
             ].map((step, index) => (
               <motion.div 
                 key={index}
-                className="bg-light rounded-lg p-8 text-center shadow-lg"
+                className="bg-white rounded-lg p-8 text-center shadow-lg"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -119,7 +119,7 @@ const Services = () => {
                 <div className="w-16 h-16 rounded-full bg-primary flex items-center justify-center mb-6 mx-auto">
                   <i className={`${step.icon} text-white text-2xl`}></i>
                 </div>
-                <h3 className="font-montserrat font-bold text-xl mb-3">{step.title}</h3>
+                <h3 className="font-montserrat font-bold text-xl mb-3 text-black">{step.title}</h3>
                 <p className="text-gray-600">
                   {step.description}
                 </p>

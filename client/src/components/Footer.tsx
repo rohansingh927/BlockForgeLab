@@ -64,6 +64,11 @@ const Footer = () => {
             <p className="text-gray-400 mb-6">
               Leading blockchain development company providing innovative solutions for businesses seeking to leverage decentralized technology.
             </p>
+            <div className="text-gray-400 mb-6">
+              <p className="mb-2"><i className="fas fa-map-marker-alt mr-2"></i> Abu Dhabi, UAE</p>
+              <p className="mb-2"><i className="fas fa-envelope mr-2"></i> info@blockforgelab.com</p>
+              <p className="mb-2"><i className="fas fa-phone-alt mr-2"></i> +971 000 000 000</p>
+            </div>
             <div className="flex space-x-4">
               <a href="#" className="text-gray-400 hover:text-white transition-colors">
                 <i className="fab fa-linkedin-in"></i>

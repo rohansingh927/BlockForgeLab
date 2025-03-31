@@ -44,7 +44,7 @@ const Contact = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="font-montserrat font-bold text-4xl mb-4">Contact Us</h2>
+            <h2 className="font-montserrat font-bold text-4xl mb-4 text-black">Contact Us</h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               Have a blockchain project in mind? Contact our team for a consultation and discover how we can help transform your business.
             </p>
@@ -75,7 +75,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-montserrat font-bold text-lg">Our Location</h4>
-                    <p className="opacity-90">Al Reem Island, Abu Dhabi, UAE</p>
+                    <p className="opacity-90">Abu Dhabi, UAE</p>
                   </div>
                 </div>
                 <div className="flex items-start mb-6">
@@ -93,7 +93,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-montserrat font-bold text-lg">Call Us</h4>
-                    <p className="opacity-90">+971 00000000</p>
+                    <p className="opacity-90">+971 000 000 000</p>
                   </div>
                 </div>
                 <div className="flex items-start mb-10">
@@ -139,7 +139,7 @@ const Contact = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="font-montserrat font-bold text-4xl mb-4">Visit Our Office</h2>
+            <h2 className="font-montserrat font-bold text-4xl mb-4 text-black">Visit Our Office</h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               Our headquarters is located in the heart of Abu Dhabi's business district. We'd love to meet you in person.
             </p>
@@ -158,7 +158,7 @@ const Contact = () => {
                 <br />
                 <span className="font-montserrat font-medium">Interactive Map Placeholder</span>
                 <br />
-                Al Reem Island, Abu Dhabi, UAE
+                Abu Dhabi, UAE
               </p>
             </div>
           </motion.div>
@@ -175,7 +175,7 @@ const Contact = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="font-montserrat font-bold text-4xl mb-4">Frequently Asked Questions</h2>
+            <h2 className="font-montserrat font-bold text-4xl mb-4 text-black">Frequently Asked Questions</h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               Find quick answers to common questions about our blockchain services and process.
             </p>
@@ -208,7 +208,7 @@ const Contact = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <h3 className="font-montserrat font-bold text-xl mb-3">{faq.question}</h3>
+                <h3 className="font-montserrat font-bold text-xl mb-3 text-black">{faq.question}</h3>
                 <p className="text-gray-600">{faq.answer}</p>
               </motion.div>
             ))}
