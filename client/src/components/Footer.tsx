@@ -47,7 +47,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-dark text-white py-12">
+    <footer className="bg-black text-white py-12">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
           <motion.div
@@ -57,7 +57,7 @@ const Footer = () => {
             transition={{ duration: 0.5 }}
           >
             <div className="mb-6">
-              <div className="h-10 w-48 bg-white text-primary font-montserrat font-bold text-xl flex items-center justify-center rounded">
+              <div className="h-10 w-48 bg-white text-black font-montserrat font-bold text-xl flex items-center justify-center rounded">
                 BlockForgeLab
               </div>
             </div>
@@ -155,7 +155,7 @@ const Footer = () => {
                 />
                 <button 
                   type="submit" 
-                  className="bg-primary hover:bg-opacity-90 px-4 py-2 rounded-r-md transition-all"
+                  className="bg-white text-black hover:bg-gray-100 px-4 py-2 rounded-r-md transition-all"
                   disabled={mutation.isPending}
                 >
                   {mutation.isPending ? (
@@ -174,7 +174,7 @@ const Footer = () => {
             </p>
           </motion.div>
         </div>
-        <div className="border-t border-gray-800 pt-8">
+        <div className="border-t border-gray-600 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm mb-4 md:mb-0">
               &copy; {new Date().getFullYear()} BlockForgeLab. All rights reserved.

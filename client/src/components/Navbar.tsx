@@ -30,49 +30,49 @@ const Navbar = () => {
   };
 
   return (
-    <header className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white shadow-md' : 'bg-white/90 backdrop-blur-sm'}`}>
+    <header className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-black shadow-md' : 'bg-black/90 backdrop-blur-sm'}`}>
       <div className="container mx-auto px-4 py-3">
         <div className="flex justify-between items-center">
           <Link href="/">
             <a className="flex items-center">
-              <div className="h-10 w-48 bg-primary text-white font-montserrat font-bold text-xl flex items-center justify-center rounded">
+              <div className="h-10 w-48 bg-white text-black font-montserrat font-bold text-xl flex items-center justify-center rounded">
                 BlockForgeLab
               </div>
             </a>
           </Link>
           <div className="hidden md:flex space-x-6">
             <Link href="/">
-              <a className={`font-montserrat hover:text-primary transition-colors font-medium ${isActive('/') ? 'text-primary' : 'text-dark'}`}>
+              <a className={`font-montserrat hover:text-white transition-colors font-medium ${isActive('/') ? 'text-white font-bold' : 'text-white'}`}>
                 Home
               </a>
             </Link>
             <Link href="/services">
-              <a className={`font-montserrat hover:text-primary transition-colors font-medium ${isActive('/services') ? 'text-primary' : 'text-dark'}`}>
+              <a className={`font-montserrat hover:text-white transition-colors font-medium ${isActive('/services') ? 'text-white font-bold' : 'text-white'}`}>
                 Services
               </a>
             </Link>
             <Link href="/about">
-              <a className={`font-montserrat hover:text-primary transition-colors font-medium ${isActive('/about') ? 'text-primary' : 'text-dark'}`}>
+              <a className={`font-montserrat hover:text-white transition-colors font-medium ${isActive('/about') ? 'text-white font-bold' : 'text-white'}`}>
                 About
               </a>
             </Link>
             <Link href="/portfolio">
-              <a className={`font-montserrat hover:text-primary transition-colors font-medium ${isActive('/portfolio') ? 'text-primary' : 'text-dark'}`}>
+              <a className={`font-montserrat hover:text-white transition-colors font-medium ${isActive('/portfolio') ? 'text-white font-bold' : 'text-white'}`}>
                 Portfolio
               </a>
             </Link>
             <Link href="/testimonials">
-              <a className={`font-montserrat hover:text-primary transition-colors font-medium ${isActive('/testimonials') ? 'text-primary' : 'text-dark'}`}>
+              <a className={`font-montserrat hover:text-white transition-colors font-medium ${isActive('/testimonials') ? 'text-white font-bold' : 'text-white'}`}>
                 Testimonials
               </a>
             </Link>
             <Link href="/contact">
-              <a className={`font-montserrat hover:text-primary transition-colors font-medium ${isActive('/contact') ? 'text-primary' : 'text-dark'}`}>
+              <a className={`font-montserrat hover:text-white transition-colors font-medium ${isActive('/contact') ? 'text-white font-bold' : 'text-white'}`}>
                 Contact
               </a>
             </Link>
           </div>
-          <button className="md:hidden text-dark" onClick={toggleMobileMenu}>
+          <button className="md:hidden text-white" onClick={toggleMobileMenu}>
             {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
@@ -80,7 +80,7 @@ const Navbar = () => {
       {/* Mobile Menu */}
       {mobileMenuOpen && (
         <motion.div 
-          className="md:hidden bg-white w-full py-4 shadow-md"
+          className="md:hidden bg-black w-full py-4 shadow-md"
           initial={{ opacity: 0, height: 0 }}
           animate={{ opacity: 1, height: "auto" }}
           exit={{ opacity: 0, height: 0 }}
@@ -88,7 +88,7 @@ const Navbar = () => {
           <div className="container mx-auto px-4 flex flex-col space-y-4">
             <Link href="/">
               <a 
-                className={`font-montserrat hover:text-primary transition-colors font-medium px-4 py-2 ${isActive('/') ? 'text-primary' : 'text-dark'}`}
+                className={`font-montserrat hover:text-white transition-colors font-medium px-4 py-2 ${isActive('/') ? 'text-white font-bold' : 'text-white'}`}
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Home
@@ -96,7 +96,7 @@ const Navbar = () => {
             </Link>
             <Link href="/services">
               <a 
-                className={`font-montserrat hover:text-primary transition-colors font-medium px-4 py-2 ${isActive('/services') ? 'text-primary' : 'text-dark'}`}
+                className={`font-montserrat hover:text-white transition-colors font-medium px-4 py-2 ${isActive('/services') ? 'text-white font-bold' : 'text-white'}`}
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Services
@@ -104,7 +104,7 @@ const Navbar = () => {
             </Link>
             <Link href="/about">
               <a 
-                className={`font-montserrat hover:text-primary transition-colors font-medium px-4 py-2 ${isActive('/about') ? 'text-primary' : 'text-dark'}`}
+                className={`font-montserrat hover:text-white transition-colors font-medium px-4 py-2 ${isActive('/about') ? 'text-white font-bold' : 'text-white'}`}
                 onClick={() => setMobileMenuOpen(false)}
               >
                 About
@@ -112,7 +112,7 @@ const Navbar = () => {
             </Link>
             <Link href="/portfolio">
               <a 
-                className={`font-montserrat hover:text-primary transition-colors font-medium px-4 py-2 ${isActive('/portfolio') ? 'text-primary' : 'text-dark'}`}
+                className={`font-montserrat hover:text-white transition-colors font-medium px-4 py-2 ${isActive('/portfolio') ? 'text-white font-bold' : 'text-white'}`}
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Portfolio
@@ -120,7 +120,7 @@ const Navbar = () => {
             </Link>
             <Link href="/testimonials">
               <a 
-                className={`font-montserrat hover:text-primary transition-colors font-medium px-4 py-2 ${isActive('/testimonials') ? 'text-primary' : 'text-dark'}`}
+                className={`font-montserrat hover:text-white transition-colors font-medium px-4 py-2 ${isActive('/testimonials') ? 'text-white font-bold' : 'text-white'}`}
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Testimonials
@@ -128,7 +128,7 @@ const Navbar = () => {
             </Link>
             <Link href="/contact">
               <a 
-                className={`font-montserrat hover:text-primary transition-colors font-medium px-4 py-2 ${isActive('/contact') ? 'text-primary' : 'text-dark'}`}
+                className={`font-montserrat hover:text-white transition-colors font-medium px-4 py-2 ${isActive('/contact') ? 'text-white font-bold' : 'text-white'}`}
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Contact
