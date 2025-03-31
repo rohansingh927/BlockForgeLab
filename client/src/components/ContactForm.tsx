@@ -53,11 +53,11 @@ const ContactForm = () => {
   return (
     <form className="bg-light p-8 rounded-lg shadow-lg" onSubmit={handleSubmit(onSubmit)}>
       <div className="mb-6">
-        <label htmlFor="name" className="block font-montserrat font-medium mb-2">Your Name</label>
+        <label htmlFor="name" className="block font-montserrat font-medium mb-2 text-black">Your Name</label>
         <input 
           type="text" 
           id="name" 
-          className={`w-full px-4 py-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary ${errors.name ? "border-red-500" : "border-gray-300"}`}
+          className={`w-full px-4 py-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-black text-black ${errors.name ? "border-red-500" : "border-gray-300"}`}
           {...register("name")}
         />
         {errors.name && (
@@ -65,11 +65,11 @@ const ContactForm = () => {
         )}
       </div>
       <div className="mb-6">
-        <label htmlFor="email" className="block font-montserrat font-medium mb-2">Email Address</label>
+        <label htmlFor="email" className="block font-montserrat font-medium mb-2 text-black">Email Address</label>
         <input 
           type="email" 
           id="email" 
-          className={`w-full px-4 py-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary ${errors.email ? "border-red-500" : "border-gray-300"}`}
+          className={`w-full px-4 py-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-black text-black ${errors.email ? "border-red-500" : "border-gray-300"}`}
           {...register("email")}
         />
         {errors.email && (
@@ -77,11 +77,11 @@ const ContactForm = () => {
         )}
       </div>
       <div className="mb-6">
-        <label htmlFor="subject" className="block font-montserrat font-medium mb-2">Subject</label>
+        <label htmlFor="subject" className="block font-montserrat font-medium mb-2 text-black">Subject</label>
         <input 
           type="text" 
           id="subject" 
-          className={`w-full px-4 py-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary ${errors.subject ? "border-red-500" : "border-gray-300"}`}
+          className={`w-full px-4 py-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-black text-black ${errors.subject ? "border-red-500" : "border-gray-300"}`}
           {...register("subject")}
         />
         {errors.subject && (
@@ -89,11 +89,11 @@ const ContactForm = () => {
         )}
       </div>
       <div className="mb-6">
-        <label htmlFor="message" className="block font-montserrat font-medium mb-2">Your Message</label>
+        <label htmlFor="message" className="block font-montserrat font-medium mb-2 text-black">Your Message</label>
         <textarea 
           id="message" 
           rows={5} 
-          className={`w-full px-4 py-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary ${errors.message ? "border-red-500" : "border-gray-300"}`}
+          className={`w-full px-4 py-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-black text-black ${errors.message ? "border-red-500" : "border-gray-300"}`}
           {...register("message")}
         ></textarea>
         {errors.message && (
@@ -102,7 +102,7 @@ const ContactForm = () => {
       </div>
       <button 
         type="submit" 
-        className="w-full bg-primary hover:bg-opacity-90 text-white px-8 py-3 rounded-md font-montserrat font-medium transition-all flex justify-center items-center"
+        className="w-full bg-black hover:bg-opacity-90 text-white px-8 py-3 rounded-md font-montserrat font-medium transition-all flex justify-center items-center"
         disabled={mutation.isPending}
       >
         {mutation.isPending ? (
