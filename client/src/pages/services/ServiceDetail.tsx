@@ -24,10 +24,8 @@ const ServiceDetail = () => {
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-4">Service Not Found</h1>
           <p className="mb-6">The service you're looking for doesn't exist or has been moved.</p>
-          <Link href="/services">
-            <a className="inline-block bg-primary text-white px-8 py-3 rounded-md font-montserrat font-medium transition-all">
-              View All Services
-            </a>
+          <Link href="/services" className="inline-block bg-primary text-white px-8 py-3 rounded-md font-montserrat font-medium transition-all">
+            View All Services
           </Link>
         </div>
       </div>
@@ -56,10 +54,8 @@ const ServiceDetail = () => {
             transition={{ duration: 0.8 }}
           >
             <div className="flex items-center mb-4">
-              <Link href="/services">
-                <span className="text-white hover:text-gray-200 transition-colors cursor-pointer">
-                  Services
-                </span>
+              <Link href="/services" className="text-white hover:text-gray-200 transition-colors cursor-pointer">
+                Services
               </Link>
               <ChevronRight className="mx-2 h-4 w-4 text-white" />
               <span>{service.title}</span>
@@ -122,10 +118,8 @@ const ServiceDetail = () => {
               </div>
               
               <div className="mt-12">
-                <Link href="/contact">
-                  <span className="inline-block bg-primary hover:bg-opacity-90 text-white px-8 py-3 rounded-md font-montserrat font-medium transition-all cursor-pointer">
-                    Request a Consultation
-                  </span>
+                <Link href="/contact" className="inline-block bg-primary hover:bg-opacity-90 text-white px-8 py-3 rounded-md font-montserrat font-medium transition-all cursor-pointer">
+                  Request a Consultation
                 </Link>
               </div>
             </motion.div>
@@ -143,16 +137,14 @@ const ServiceDetail = () => {
                     .filter(s => s.title !== service.title)
                     .slice(0, 4)
                     .map((relatedService, index) => (
-                      <Link key={index} href={`/services/${relatedService.title.toLowerCase().replace(/\s+/g, '-')}`}>
-                        <div className="block p-4 bg-white border border-gray-200 rounded-md shadow hover:shadow-md transition-all cursor-pointer">
-                          <div className="flex items-center">
-                            <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center mr-3">
-                              <i className={`${relatedService.icon} text-white text-sm`}></i>
-                            </div>
-                            <h4 className="font-montserrat font-medium text-black">
-                              {relatedService.title}
-                            </h4>
+                      <Link key={index} href={`/services/${relatedService.title.toLowerCase().replace(/\s+/g, '-')}`} className="block p-4 bg-white border border-gray-200 rounded-md shadow hover:shadow-md transition-all cursor-pointer">
+                        <div className="flex items-center">
+                          <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center mr-3">
+                            <i className={`${relatedService.icon} text-white text-sm`}></i>
                           </div>
+                          <h4 className="font-montserrat font-medium text-black">
+                            {relatedService.title}
+                          </h4>
                         </div>
                       </Link>
                     ))}
@@ -207,10 +199,8 @@ const ServiceDetail = () => {
             <p className="text-xl mb-8 opacity-90">
               Contact our team today to schedule a consultation and discover how our blockchain services can help you achieve your business objectives.
             </p>
-            <Link href="/contact">
-              <span className="inline-block bg-white text-primary hover:bg-opacity-90 px-8 py-3 rounded-md font-montserrat font-medium transition-all cursor-pointer">
-                Get Started
-              </span>
+            <Link href="/contact" className="inline-block bg-white text-primary hover:bg-opacity-90 px-8 py-3 rounded-md font-montserrat font-medium transition-all cursor-pointer">
+              Get Started
             </Link>
           </motion.div>
         </div>

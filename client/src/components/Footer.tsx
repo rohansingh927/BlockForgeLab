@@ -93,33 +93,33 @@ const Footer = () => {
             <h3 className="font-montserrat font-bold text-xl mb-6">Quick Links</h3>
             <ul className="space-y-3">
               <li>
-                <Link href="/">
-                  <a className="text-gray-400 hover:text-white transition-colors">Home</a>
+                <Link href="/" className="text-gray-400 hover:text-white transition-colors">
+                  Home
                 </Link>
               </li>
               <li>
-                <Link href="/services">
-                  <a className="text-gray-400 hover:text-white transition-colors">Services</a>
+                <Link href="/services" className="text-gray-400 hover:text-white transition-colors">
+                  Services
                 </Link>
               </li>
               <li>
-                <Link href="/about">
-                  <a className="text-gray-400 hover:text-white transition-colors">About Us</a>
+                <Link href="/about" className="text-gray-400 hover:text-white transition-colors">
+                  About Us
                 </Link>
               </li>
               <li>
-                <Link href="/portfolio">
-                  <a className="text-gray-400 hover:text-white transition-colors">Portfolio</a>
+                <Link href="/portfolio" className="text-gray-400 hover:text-white transition-colors">
+                  Portfolio
                 </Link>
               </li>
               <li>
-                <Link href="/testimonials">
-                  <a className="text-gray-400 hover:text-white transition-colors">Testimonials</a>
+                <Link href="/testimonials" className="text-gray-400 hover:text-white transition-colors">
+                  Testimonials
                 </Link>
               </li>
               <li>
-                <Link href="/contact">
-                  <a className="text-gray-400 hover:text-white transition-colors">Contact</a>
+                <Link href="/contact" className="text-gray-400 hover:text-white transition-colors">
+                  Contact
                 </Link>
               </li>
             </ul>

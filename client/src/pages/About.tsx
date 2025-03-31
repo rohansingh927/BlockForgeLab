@@ -233,10 +233,8 @@ const About = () => {
             <p className="text-xl mb-8 opacity-90">
               Join the growing number of businesses partnering with BlockForgeLab to unlock the full potential of blockchain technology.
             </p>
-            <Link href="/contact">
-              <a className="inline-block bg-white text-primary hover:bg-opacity-90 px-8 py-3 rounded-md font-montserrat font-medium transition-all">
-                Get In Touch
-              </a>
+            <Link href="/contact" className="inline-block bg-white text-primary hover:bg-opacity-90 px-8 py-3 rounded-md font-montserrat font-medium transition-all">
+              Get In Touch
             </Link>
           </motion.div>
         </div>

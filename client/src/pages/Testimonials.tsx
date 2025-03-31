@@ -106,7 +106,7 @@ const Testimonials = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="font-montserrat font-bold text-4xl mb-4">Success Stories</h2>
+            <h2 className="font-montserrat font-bold text-4xl mb-4 text-black">Success Stories</h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               Explore in-depth case studies of how our blockchain solutions have delivered measurable results for our clients.
             </p>
@@ -178,10 +178,8 @@ const Testimonials = () => {
             <p className="text-xl mb-8 opacity-90">
               Let's discuss how BlockForgeLab can help you harness the power of blockchain technology to transform your business.
             </p>
-            <Link href="/contact">
-              <a className="inline-block bg-white text-primary hover:bg-opacity-90 px-8 py-3 rounded-md font-montserrat font-medium transition-all">
-                Contact Us Today
-              </a>
+            <Link href="/contact" className="inline-block bg-white text-primary hover:bg-opacity-90 px-8 py-3 rounded-md font-montserrat font-medium transition-all">
+              Contact Us Today
             </Link>
           </motion.div>
         </div>

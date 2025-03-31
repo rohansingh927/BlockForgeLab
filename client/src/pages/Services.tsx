@@ -143,10 +143,8 @@ const Services = () => {
             <p className="text-xl mb-8 opacity-90">
               Contact our team today to schedule a consultation and discover how our blockchain services can help you achieve your business objectives.
             </p>
-            <Link href="/contact">
-              <a className="inline-block bg-white text-primary hover:bg-opacity-90 px-8 py-3 rounded-md font-montserrat font-medium transition-all">
-                Get Started
-              </a>
+            <Link href="/contact" className="inline-block bg-white text-primary hover:bg-opacity-90 px-8 py-3 rounded-md font-montserrat font-medium transition-all">
+              Get Started
             </Link>
           </motion.div>
         </div>

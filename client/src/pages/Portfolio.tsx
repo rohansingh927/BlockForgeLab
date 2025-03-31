@@ -46,7 +46,7 @@ const Portfolio = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="font-montserrat font-bold text-4xl mb-4">Our Blockchain Projects</h2>
+            <h2 className="font-montserrat font-bold text-4xl mb-4 text-black">Our Blockchain Projects</h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               Each project represents our commitment to developing innovative blockchain solutions that address real business challenges.
             </p>
@@ -122,10 +122,8 @@ const Portfolio = () => {
             <p className="text-xl mb-8 opacity-90">
               Let's discuss how we can bring your blockchain vision to life. Our team is ready to help you navigate the complexities of blockchain development.
             </p>
-            <Link href="/contact">
-              <a className="inline-block bg-white text-primary hover:bg-opacity-90 px-8 py-3 rounded-md font-montserrat font-medium transition-all">
-                Start a Project
-              </a>
+            <Link href="/contact" className="inline-block bg-white text-primary hover:bg-opacity-90 px-8 py-3 rounded-md font-montserrat font-medium transition-all">
+              Start a Project
             </Link>
           </motion.div>
         </div>
