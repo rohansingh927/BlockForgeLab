@@ -56,18 +56,18 @@ const Navbar = () => {
     <header className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-black shadow-md' : 'bg-black/90 backdrop-blur-sm'}`}>
       <div className="container mx-auto px-4 py-3">
         <div className="flex justify-between items-center">
-          <Link href="/">
-            <a className="flex items-center">
-              <div className="h-10 w-48 bg-white text-black font-montserrat font-bold text-xl flex items-center justify-center rounded">
+          <div className="flex items-center">
+            <Link href="/">
+              <div className="h-10 w-48 bg-white text-black font-montserrat font-bold text-xl flex items-center justify-center rounded cursor-pointer">
                 BlockForgeLab
               </div>
-            </a>
-          </Link>
+            </Link>
+          </div>
           <div className="hidden md:flex space-x-6">
             <Link href="/">
-              <a className={`font-montserrat hover:text-white transition-colors font-medium ${isActive('/') ? 'text-white font-bold' : 'text-white'}`}>
+              <div className={`font-montserrat hover:text-white transition-colors font-medium cursor-pointer ${isActive('/') ? 'text-white font-bold' : 'text-white'}`}>
                 Home
-              </a>
+              </div>
             </Link>
             <div ref={servicesDropdownRef} className="relative group">
               <div 
@@ -88,45 +88,45 @@ const Navbar = () => {
                   <div className="py-2">
                     {services.map((service, index) => (
                       <Link key={index} href={`/services#${service.title.toLowerCase().replace(/\s+/g, '-')}`}>
-                        <a 
-                          className="block px-4 py-2 text-sm text-white hover:bg-gray-800 transition-colors"
+                        <div 
+                          className="block px-4 py-2 text-sm text-white hover:bg-gray-800 transition-colors cursor-pointer"
                           onClick={() => setServicesDropdownOpen(false)}
                         >
                           {service.title}
-                        </a>
+                        </div>
                       </Link>
                     ))}
                     <Link href="/services">
-                      <a 
-                        className="block px-4 py-2 text-sm text-white hover:bg-gray-800 transition-colors border-t border-gray-700 mt-1 pt-1"
+                      <div 
+                        className="block px-4 py-2 text-sm text-white hover:bg-gray-800 transition-colors border-t border-gray-700 mt-1 pt-1 cursor-pointer"
                         onClick={() => setServicesDropdownOpen(false)}
                       >
                         All Services
-                      </a>
+                      </div>
                     </Link>
                   </div>
                 </motion.div>
               )}
             </div>
             <Link href="/about">
-              <a className={`font-montserrat hover:text-white transition-colors font-medium ${isActive('/about') ? 'text-white font-bold' : 'text-white'}`}>
+              <div className={`font-montserrat hover:text-white transition-colors font-medium cursor-pointer ${isActive('/about') ? 'text-white font-bold' : 'text-white'}`}>
                 About
-              </a>
+              </div>
             </Link>
             <Link href="/portfolio">
-              <a className={`font-montserrat hover:text-white transition-colors font-medium ${isActive('/portfolio') ? 'text-white font-bold' : 'text-white'}`}>
+              <div className={`font-montserrat hover:text-white transition-colors font-medium cursor-pointer ${isActive('/portfolio') ? 'text-white font-bold' : 'text-white'}`}>
                 Portfolio
-              </a>
+              </div>
             </Link>
             <Link href="/testimonials">
-              <a className={`font-montserrat hover:text-white transition-colors font-medium ${isActive('/testimonials') ? 'text-white font-bold' : 'text-white'}`}>
+              <div className={`font-montserrat hover:text-white transition-colors font-medium cursor-pointer ${isActive('/testimonials') ? 'text-white font-bold' : 'text-white'}`}>
                 Testimonials
-              </a>
+              </div>
             </Link>
             <Link href="/contact">
-              <a className={`font-montserrat hover:text-white transition-colors font-medium ${isActive('/contact') ? 'text-white font-bold' : 'text-white'}`}>
+              <div className={`font-montserrat hover:text-white transition-colors font-medium cursor-pointer ${isActive('/contact') ? 'text-white font-bold' : 'text-white'}`}>
                 Contact
-              </a>
+              </div>
             </Link>
           </div>
           <button className="md:hidden text-white" onClick={toggleMobileMenu}>
@@ -144,12 +144,12 @@ const Navbar = () => {
         >
           <div className="container mx-auto px-4 flex flex-col space-y-4">
             <Link href="/">
-              <a 
-                className={`font-montserrat hover:text-white transition-colors font-medium px-4 py-2 ${isActive('/') ? 'text-white font-bold' : 'text-white'}`}
+              <div 
+                className={`font-montserrat hover:text-white transition-colors font-medium px-4 py-2 cursor-pointer ${isActive('/') ? 'text-white font-bold' : 'text-white'}`}
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Home
-              </a>
+              </div>
             </Link>
             <div>
               <div 
@@ -168,62 +168,62 @@ const Navbar = () => {
                 >
                   {services.map((service, index) => (
                     <Link key={index} href={`/services#${service.title.toLowerCase().replace(/\s+/g, '-')}`}>
-                      <a 
-                        className="text-sm text-white hover:text-gray-300 py-1"
+                      <div 
+                        className="text-sm text-white hover:text-gray-300 py-1 cursor-pointer"
                         onClick={() => {
                           setMobileMenuOpen(false);
                           setMobileServicesDropdownOpen(false);
                         }}
                       >
                         {service.title}
-                      </a>
+                      </div>
                     </Link>
                   ))}
                   <Link href="/services">
-                    <a 
-                      className="text-sm text-white hover:text-gray-300 py-1 font-medium"
+                    <div 
+                      className="text-sm text-white hover:text-gray-300 py-1 font-medium cursor-pointer"
                       onClick={() => {
                         setMobileMenuOpen(false);
                         setMobileServicesDropdownOpen(false);
                       }}
                     >
                       View All Services
-                    </a>
+                    </div>
                   </Link>
                 </motion.div>
               )}
             </div>
             <Link href="/about">
-              <a 
-                className={`font-montserrat hover:text-white transition-colors font-medium px-4 py-2 ${isActive('/about') ? 'text-white font-bold' : 'text-white'}`}
+              <div 
+                className={`font-montserrat hover:text-white transition-colors font-medium px-4 py-2 cursor-pointer ${isActive('/about') ? 'text-white font-bold' : 'text-white'}`}
                 onClick={() => setMobileMenuOpen(false)}
               >
                 About
-              </a>
+              </div>
             </Link>
             <Link href="/portfolio">
-              <a 
-                className={`font-montserrat hover:text-white transition-colors font-medium px-4 py-2 ${isActive('/portfolio') ? 'text-white font-bold' : 'text-white'}`}
+              <div 
+                className={`font-montserrat hover:text-white transition-colors font-medium px-4 py-2 cursor-pointer ${isActive('/portfolio') ? 'text-white font-bold' : 'text-white'}`}
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Portfolio
-              </a>
+              </div>
             </Link>
             <Link href="/testimonials">
-              <a 
-                className={`font-montserrat hover:text-white transition-colors font-medium px-4 py-2 ${isActive('/testimonials') ? 'text-white font-bold' : 'text-white'}`}
+              <div 
+                className={`font-montserrat hover:text-white transition-colors font-medium px-4 py-2 cursor-pointer ${isActive('/testimonials') ? 'text-white font-bold' : 'text-white'}`}
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Testimonials
-              </a>
+              </div>
             </Link>
             <Link href="/contact">
-              <a 
-                className={`font-montserrat hover:text-white transition-colors font-medium px-4 py-2 ${isActive('/contact') ? 'text-white font-bold' : 'text-white'}`}
+              <div 
+                className={`font-montserrat hover:text-white transition-colors font-medium px-4 py-2 cursor-pointer ${isActive('/contact') ? 'text-white font-bold' : 'text-white'}`}
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Contact
-              </a>
+              </div>
             </Link>
           </div>
         </motion.div>
