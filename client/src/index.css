@@ -7,6 +7,11 @@
     @apply border-border;
   }
 
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px; /* Offset for fixed header */
+  }
+
   body {
     @apply font-sans antialiased bg-black text-white;
   }

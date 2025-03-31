@@ -1,15 +1,27 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "wouter";
 import { motion } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
+import { services } from "@/data/services";
 
 const Navbar = () => {
   const [location] = useLocation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
+  const [mobileServicesDropdownOpen, setMobileServicesDropdownOpen] = useState(false);
+  const servicesDropdownRef = useRef<HTMLDivElement>(null);
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
+  };
+
+  const toggleServicesDropdown = () => {
+    setServicesDropdownOpen(!servicesDropdownOpen);
+  };
+
+  const toggleMobileServicesDropdown = () => {
+    setMobileServicesDropdownOpen(!mobileServicesDropdownOpen);
   };
 
   useEffect(() => {
@@ -21,8 +33,19 @@ const Navbar = () => {
       }
     };
 
+    const handleClickOutside = (event: MouseEvent) => {
+      if (servicesDropdownRef.current && !servicesDropdownRef.current.contains(event.target as Node)) {
+        setServicesDropdownOpen(false);
+      }
+    };
+
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    document.addEventListener("mousedown", handleClickOutside);
+    
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
   }, []);
 
   const isActive = (path: string) => {
@@ -46,11 +69,45 @@ const Navbar = () => {
                 Home
               </a>
             </Link>
-            <Link href="/services">
-              <a className={`font-montserrat hover:text-white transition-colors font-medium ${isActive('/services') ? 'text-white font-bold' : 'text-white'}`}>
+            <div ref={servicesDropdownRef} className="relative group">
+              <div 
+                className={`font-montserrat hover:text-white transition-colors font-medium cursor-pointer flex items-center ${isActive('/services') ? 'text-white font-bold' : 'text-white'}`}
+                onClick={toggleServicesDropdown}
+              >
                 Services
-              </a>
-            </Link>
+                <ChevronDown size={16} className={`ml-1 transform transition-transform duration-200 ${servicesDropdownOpen ? 'rotate-180' : ''}`} />
+              </div>
+              {servicesDropdownOpen && (
+                <motion.div 
+                  className="absolute left-0 mt-2 w-64 bg-black border border-gray-700 rounded-md shadow-lg z-50"
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -10 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <div className="py-2">
+                    {services.map((service, index) => (
+                      <Link key={index} href={`/services#${service.title.toLowerCase().replace(/\s+/g, '-')}`}>
+                        <a 
+                          className="block px-4 py-2 text-sm text-white hover:bg-gray-800 transition-colors"
+                          onClick={() => setServicesDropdownOpen(false)}
+                        >
+                          {service.title}
+                        </a>
+                      </Link>
+                    ))}
+                    <Link href="/services">
+                      <a 
+                        className="block px-4 py-2 text-sm text-white hover:bg-gray-800 transition-colors border-t border-gray-700 mt-1 pt-1"
+                        onClick={() => setServicesDropdownOpen(false)}
+                      >
+                        All Services
+                      </a>
+                    </Link>
+                  </div>
+                </motion.div>
+              )}
+            </div>
             <Link href="/about">
               <a className={`font-montserrat hover:text-white transition-colors font-medium ${isActive('/about') ? 'text-white font-bold' : 'text-white'}`}>
                 About
@@ -94,14 +151,48 @@ const Navbar = () => {
                 Home
               </a>
             </Link>
-            <Link href="/services">
-              <a 
-                className={`font-montserrat hover:text-white transition-colors font-medium px-4 py-2 ${isActive('/services') ? 'text-white font-bold' : 'text-white'}`}
-                onClick={() => setMobileMenuOpen(false)}
+            <div>
+              <div 
+                className={`font-montserrat hover:text-white transition-colors font-medium px-4 py-2 flex items-center justify-between ${isActive('/services') ? 'text-white font-bold' : 'text-white'}`}
+                onClick={toggleMobileServicesDropdown}
               >
-                Services
-              </a>
-            </Link>
+                <span>Services</span>
+                <ChevronDown size={16} className={`transform transition-transform duration-200 ${mobileServicesDropdownOpen ? 'rotate-180' : ''}`} />
+              </div>
+              {mobileServicesDropdownOpen && (
+                <motion.div
+                  className="pl-8 flex flex-col space-y-2 py-2"
+                  initial={{ opacity: 0, height: 0 }}
+                  animate={{ opacity: 1, height: "auto" }}
+                  exit={{ opacity: 0, height: 0 }}
+                >
+                  {services.map((service, index) => (
+                    <Link key={index} href={`/services#${service.title.toLowerCase().replace(/\s+/g, '-')}`}>
+                      <a 
+                        className="text-sm text-white hover:text-gray-300 py-1"
+                        onClick={() => {
+                          setMobileMenuOpen(false);
+                          setMobileServicesDropdownOpen(false);
+                        }}
+                      >
+                        {service.title}
+                      </a>
+                    </Link>
+                  ))}
+                  <Link href="/services">
+                    <a 
+                      className="text-sm text-white hover:text-gray-300 py-1 font-medium"
+                      onClick={() => {
+                        setMobileMenuOpen(false);
+                        setMobileServicesDropdownOpen(false);
+                      }}
+                    >
+                      View All Services
+                    </a>
+                  </Link>
+                </motion.div>
+              )}
+            </div>
             <Link href="/about">
               <a 
                 className={`font-montserrat hover:text-white transition-colors font-medium px-4 py-2 ${isActive('/about') ? 'text-white font-bold' : 'text-white'}`}
