@@ -9,11 +9,18 @@ import TeamCard from "@/components/TeamCard";
 import ProjectCard from "@/components/ProjectCard";
 import TestimonialCard from "@/components/TestimonialCard";
 import ContactForm from "@/components/ContactForm";
+import SEO from "@/components/SEO";
 import { ChevronRight } from "lucide-react";
 
 const Home = () => {
   return (
     <div className="font-opensans text-dark">
+      <SEO 
+        title="BlockForgeLab - Premier Blockchain Development Company"
+        description="BlockForgeLab designs and develops cutting-edge blockchain solutions that transform businesses through decentralized technology, creating secure, transparent, and efficient ecosystems."
+        keywords="blockchain development, decentralized technology, smart contracts, blockchain solutions, crypto development, web3, BlockForgeLab"
+        canonicalUrl="/"
+      />
       {/* Hero Section */}
       <section 
         className="relative h-screen bg-cover bg-center pt-16" 

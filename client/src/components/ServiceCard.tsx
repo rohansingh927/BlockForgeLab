@@ -24,9 +24,9 @@ const ServiceCard = ({ service }: ServiceCardProps) => {
         {service.description}
       </p>
       <Link href={`/services/${service.title.toLowerCase().replace(/\s+/g, '-')}`}>
-        <div className="text-primary font-montserrat font-medium hover:text-secondary flex items-center cursor-pointer">
+        <span className="text-primary font-montserrat font-medium hover:text-secondary flex items-center cursor-pointer">
           Learn More <ArrowRight className="ml-2 h-4 w-4" />
-        </div>
+        </span>
       </Link>
     </motion.div>
   );

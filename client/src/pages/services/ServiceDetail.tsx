@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { useLocation, Link } from "wouter";
 import { services } from "@/data/services";
 import { ChevronRight } from "lucide-react";
+import SEO from "@/components/SEO";
 
 const ServiceDetail = () => {
   const [location] = useLocation();
@@ -15,6 +16,11 @@ const ServiceDetail = () => {
   if (!service) {
     return (
       <div className="min-h-screen flex items-center justify-center">
+        <SEO 
+          title="Service Not Found | BlockForgeLab"
+          description="The service you're looking for doesn't exist or has been moved."
+          canonicalUrl="/services"
+        />
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-4">Service Not Found</h1>
           <p className="mb-6">The service you're looking for doesn't exist or has been moved.</p>
@@ -30,6 +36,12 @@ const ServiceDetail = () => {
 
   return (
     <div className="font-opensans text-dark">
+      <SEO 
+        title={`${service.title} | BlockForgeLab`}
+        description={service.description}
+        keywords={`${service.title.toLowerCase()}, blockchain services, blockchain development, ${service.title.toLowerCase()} blockchain solutions, BlockForgeLab`}
+        canonicalUrl={`/services/${service.title.toLowerCase().replace(/\s+/g, '-')}`}
+      />
       {/* Hero Section */}
       <section 
         className="relative pt-32 pb-20 bg-cover bg-center" 
@@ -45,9 +57,9 @@ const ServiceDetail = () => {
           >
             <div className="flex items-center mb-4">
               <Link href="/services">
-                <a className="text-white hover:text-gray-200 transition-colors">
+                <span className="text-white hover:text-gray-200 transition-colors cursor-pointer">
                   Services
-                </a>
+                </span>
               </Link>
               <ChevronRight className="mx-2 h-4 w-4 text-white" />
               <span>{service.title}</span>
@@ -111,9 +123,9 @@ const ServiceDetail = () => {
               
               <div className="mt-12">
                 <Link href="/contact">
-                  <a className="inline-block bg-primary hover:bg-opacity-90 text-white px-8 py-3 rounded-md font-montserrat font-medium transition-all">
+                  <span className="inline-block bg-primary hover:bg-opacity-90 text-white px-8 py-3 rounded-md font-montserrat font-medium transition-all cursor-pointer">
                     Request a Consultation
-                  </a>
+                  </span>
                 </Link>
               </div>
             </motion.div>
@@ -132,7 +144,7 @@ const ServiceDetail = () => {
                     .slice(0, 4)
                     .map((relatedService, index) => (
                       <Link key={index} href={`/services/${relatedService.title.toLowerCase().replace(/\s+/g, '-')}`}>
-                        <a className="block p-4 bg-white rounded-md shadow hover:shadow-md transition-all">
+                        <div className="block p-4 bg-white rounded-md shadow hover:shadow-md transition-all cursor-pointer">
                           <div className="flex items-center">
                             <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center mr-3">
                               <i className={`${relatedService.icon} text-white text-sm`}></i>
@@ -141,7 +153,7 @@ const ServiceDetail = () => {
                               {relatedService.title}
                             </h4>
                           </div>
-                        </a>
+                        </div>
                       </Link>
                     ))}
                 </div>
@@ -196,9 +208,9 @@ const ServiceDetail = () => {
               Contact our team today to schedule a consultation and discover how our blockchain services can help you achieve your business objectives.
             </p>
             <Link href="/contact">
-              <a className="inline-block bg-white text-primary hover:bg-opacity-90 px-8 py-3 rounded-md font-montserrat font-medium transition-all">
+              <span className="inline-block bg-white text-primary hover:bg-opacity-90 px-8 py-3 rounded-md font-montserrat font-medium transition-all cursor-pointer">
                 Get Started
-              </a>
+              </span>
             </Link>
           </motion.div>
         </div>

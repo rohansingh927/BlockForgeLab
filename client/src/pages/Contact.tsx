@@ -1,9 +1,16 @@
 import { motion } from "framer-motion";
 import ContactForm from "@/components/ContactForm";
+import SEO from "@/components/SEO";
 
 const Contact = () => {
   return (
     <div className="font-opensans text-dark">
+      <SEO 
+        title="Contact Us | BlockForgeLab"
+        description="Have questions about our blockchain solutions? Contact BlockForgeLab today for information, consultation, or to start your blockchain project."
+        keywords="contact BlockForgeLab, blockchain consulting, blockchain services, blockchain development company, contact us"
+        canonicalUrl="/contact"
+      />
       {/* Hero Section */}
       <section 
         className="relative pt-32 pb-20 bg-cover bg-center" 

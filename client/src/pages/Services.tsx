@@ -1,11 +1,18 @@
 import { motion } from "framer-motion";
 import { services } from "@/data/services";
 import ServiceCard from "@/components/ServiceCard";
+import SEO from "@/components/SEO";
 import { Link } from "wouter";
 
 const Services = () => {
   return (
     <div className="font-opensans text-dark">
+      <SEO 
+        title="Blockchain Services | BlockForgeLab"
+        description="Explore BlockForgeLab's comprehensive blockchain services including smart contract development, DApp creation, blockchain consulting, and enterprise solutions."
+        keywords="blockchain services, smart contracts, DApps, blockchain consulting, enterprise blockchain, blockchain development, distributed ledger technology"
+        canonicalUrl="/services"
+      />
       {/* Hero Section */}
       <section 
         className="relative pt-32 pb-20 bg-cover bg-center" 

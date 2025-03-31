@@ -1,11 +1,18 @@
 import { motion } from "framer-motion";
 import { team } from "@/data/team";
 import TeamCard from "@/components/TeamCard";
+import SEO from "@/components/SEO";
 import { Link } from "wouter";
 
 const About = () => {
   return (
     <div className="font-opensans text-dark">
+      <SEO 
+        title="About Us | BlockForgeLab"
+        description="Learn about BlockForgeLab's journey, mission, and the talented team behind our innovative blockchain solutions. Founded in 2018, we've delivered over 50 blockchain projects."
+        keywords="BlockForgeLab team, blockchain company, blockchain experts, about BlockForgeLab, blockchain mission, blockchain vision"
+        canonicalUrl="/about"
+      />
       {/* Hero Section */}
       <section 
         className="relative pt-32 pb-20 bg-cover bg-center" 
