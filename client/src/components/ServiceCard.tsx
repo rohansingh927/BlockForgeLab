@@ -19,7 +19,7 @@ const ServiceCard = ({ service }: ServiceCardProps) => {
       <div className="w-16 h-16 rounded-full bg-primary bg-opacity-10 flex items-center justify-center mb-6">
         <i className={`${service.icon} text-primary text-2xl`}></i>
       </div>
-      <h3 className="font-montserrat font-bold text-xl mb-3">{service.title}</h3>
+      <h3 className="font-montserrat font-bold text-xl mb-3 text-black">{service.title}</h3>
       <p className="text-gray-600 mb-4">
         {service.description}
       </p>

@@ -100,7 +100,7 @@ const Home = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="font-montserrat font-bold text-4xl mb-6">Who We Are</h2>
+              <h2 className="font-montserrat font-bold text-4xl mb-6 text-black">Who We Are</h2>
               <p className="text-lg text-gray-600 mb-4">
                 BlockForgeLab is a premier blockchain development company dedicated to building innovative decentralized solutions for businesses across industries. Founded by a team of blockchain pioneers and technology enthusiasts, we've been at the forefront of the blockchain revolution since its early days.
               </p>
@@ -190,7 +190,7 @@ const Home = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="font-montserrat font-bold text-4xl mb-4">Our Blockchain Projects</h2>
+            <h2 className="font-montserrat font-bold text-4xl mb-4 text-black">Our Blockchain Projects</h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               Explore our portfolio of successful blockchain implementations across various industries and use cases.
             </p>
