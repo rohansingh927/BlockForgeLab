@@ -11,7 +11,7 @@ export const projects = [
     title: "Transparent Supply Chain",
     description: "Blockchain-based supply chain tracking system providing end-to-end visibility and provenance verification for global logistics.",
     category: "supply-chain",
-    image: "https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
+    image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
   },
   {
     id: 3,

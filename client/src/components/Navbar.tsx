@@ -87,7 +87,7 @@ const Navbar = () => {
                 >
                   <div className="py-2">
                     {services.map((service, index) => (
-                      <Link key={index} href={`/services#${service.title.toLowerCase().replace(/\s+/g, '-')}`}>
+                      <Link key={index} href={`/services/${service.title.toLowerCase().replace(/\s+/g, '-')}`}>
                         <div 
                           className="block px-4 py-2 text-sm text-white hover:bg-gray-800 transition-colors cursor-pointer"
                           onClick={() => setServicesDropdownOpen(false)}
@@ -167,7 +167,7 @@ const Navbar = () => {
                   exit={{ opacity: 0, height: 0 }}
                 >
                   {services.map((service, index) => (
-                    <Link key={index} href={`/services#${service.title.toLowerCase().replace(/\s+/g, '-')}`}>
+                    <Link key={index} href={`/services/${service.title.toLowerCase().replace(/\s+/g, '-')}`}>
                       <div 
                         className="text-sm text-white hover:text-gray-300 py-1 cursor-pointer"
                         onClick={() => {

@@ -109,8 +109,8 @@ const Services = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <div className="w-16 h-16 rounded-full bg-primary bg-opacity-10 flex items-center justify-center mb-6 mx-auto">
-                  <i className={`${step.icon} text-primary text-2xl`}></i>
+                <div className="w-16 h-16 rounded-full bg-primary flex items-center justify-center mb-6 mx-auto">
+                  <i className={`${step.icon} text-white text-2xl`}></i>
                 </div>
                 <h3 className="font-montserrat font-bold text-xl mb-3">{step.title}</h3>
                 <p className="text-gray-600">
