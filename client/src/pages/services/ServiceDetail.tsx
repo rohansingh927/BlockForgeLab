@@ -72,7 +72,7 @@ const ServiceDetail = () => {
       </section>
 
       {/* Content Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-black">
         <div className="container mx-auto px-4">
           <div className="flex flex-col lg:flex-row gap-12">
             <motion.div 
@@ -85,23 +85,23 @@ const ServiceDetail = () => {
                 <div className="w-16 h-16 rounded-full bg-primary flex items-center justify-center mr-6">
                   <i className={`${service.icon} text-white text-2xl`}></i>
                 </div>
-                <h2 className="font-montserrat font-bold text-3xl text-black">
+                <h2 className="font-montserrat font-bold text-3xl text-white">
                   {service.title}
                 </h2>
               </div>
               
-              <div className="prose prose-lg max-w-none">
+              <div className="prose prose-lg max-w-none text-white prose-headings:text-white prose-strong:text-white">
                 <p>
                   {service.description}
                 </p>
                 
-                <h3 className="text-black">What We Offer</h3>
+                <h3 className="text-white">What We Offer</h3>
                 <p>
                   At BlockForgeLab, our {service.title.toLowerCase()} services are designed to provide comprehensive solutions tailored to your specific business needs. Our team of experienced blockchain developers and consultants work closely with you to understand your requirements and deliver high-quality solutions.
                 </p>
                 
-                <h3 className="text-black">Key Benefits</h3>
-                <ul>
+                <h3 className="text-white">Key Benefits</h3>
+                <ul className="text-white">
                   <li>Enhanced security and transparency through blockchain technology</li>
                   <li>Streamlined processes and reduced operational costs</li>
                   <li>Improved trust and accountability in digital transactions</li>
@@ -109,11 +109,11 @@ const ServiceDetail = () => {
                   <li>Ongoing support and maintenance to ensure optimal performance</li>
                 </ul>
                 
-                <h3 className="text-black">Our Approach</h3>
+                <h3 className="text-white">Our Approach</h3>
                 <p>
                   We follow a structured approach to deliver top-notch {service.title.toLowerCase()} solutions:
                 </p>
-                <ol>
+                <ol className="text-white">
                   <li><strong>Discovery and Analysis:</strong> We start by understanding your business goals, challenges, and requirements.</li>
                   <li><strong>Strategy and Design:</strong> Our team designs a custom solution architecture tailored to your specific use case.</li>
                   <li><strong>Development and Testing:</strong> We develop and rigorously test your solution to ensure security and performance.</li>
@@ -136,20 +136,20 @@ const ServiceDetail = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              <div className="bg-light rounded-lg shadow-lg p-8">
-                <h3 className="font-montserrat font-bold text-xl mb-6 text-black">Related Services</h3>
+              <div className="bg-black border border-gray-800 rounded-lg shadow-lg p-8">
+                <h3 className="font-montserrat font-bold text-xl mb-6 text-white">Related Services</h3>
                 <div className="space-y-4">
                   {services
                     .filter(s => s.title !== service.title)
                     .slice(0, 4)
                     .map((relatedService, index) => (
                       <Link key={index} href={`/services/${relatedService.title.toLowerCase().replace(/\s+/g, '-')}`}>
-                        <div className="block p-4 bg-white rounded-md shadow hover:shadow-md transition-all cursor-pointer">
+                        <div className="block p-4 bg-black border border-gray-800 rounded-md shadow hover:shadow-md transition-all cursor-pointer">
                           <div className="flex items-center">
                             <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center mr-3">
                               <i className={`${relatedService.icon} text-white text-sm`}></i>
                             </div>
-                            <h4 className="font-montserrat font-medium text-black">
+                            <h4 className="font-montserrat font-medium text-white">
                               {relatedService.title}
                             </h4>
                           </div>
@@ -158,31 +158,31 @@ const ServiceDetail = () => {
                     ))}
                 </div>
                 
-                <div className="mt-8 pt-6 border-t border-gray-200">
-                  <h3 className="font-montserrat font-bold text-xl mb-6 text-black">Contact Us</h3>
+                <div className="mt-8 pt-6 border-t border-gray-800">
+                  <h3 className="font-montserrat font-bold text-xl mb-6 text-white">Contact Us</h3>
                   <div className="space-y-4">
                     <div className="flex items-start">
-                      <div className="text-lg mr-3 text-primary">
+                      <div className="text-lg mr-3 bg-primary rounded-full w-8 h-8 flex items-center justify-center text-white">
                         <i className="fas fa-envelope"></i>
                       </div>
                       <div>
-                        <p className="text-gray-600">info@blockforgelab.com</p>
+                        <p className="text-white">info@blockforgelab.com</p>
                       </div>
                     </div>
                     <div className="flex items-start">
-                      <div className="text-lg mr-3 text-primary">
+                      <div className="text-lg mr-3 bg-primary rounded-full w-8 h-8 flex items-center justify-center text-white">
                         <i className="fas fa-phone-alt"></i>
                       </div>
                       <div>
-                        <p className="text-gray-600">+1 0</p>
+                        <p className="text-white">+971 00000000</p>
                       </div>
                     </div>
                     <div className="flex items-start">
-                      <div className="text-lg mr-3 text-primary">
+                      <div className="text-lg mr-3 bg-primary rounded-full w-8 h-8 flex items-center justify-center text-white">
                         <i className="fas fa-map-marker-alt"></i>
                       </div>
                       <div>
-                        <p className="text-gray-600">Abu Dhabi, UAE</p>
+                        <p className="text-white">Al Reem Island, Abu Dhabi, UAE</p>
                       </div>
                     </div>
                   </div>

@@ -154,7 +154,7 @@ const Contact = () => {
           >
             <div className="w-full h-full bg-primary bg-opacity-10 flex items-center justify-center">
               <p className="text-gray-600 text-center">
-                <i className="fas fa-map-marker-alt text-3xl mb-3 text-primary"></i>
+                <i className="fas fa-map-marker-alt text-3xl mb-3 text-white"></i>
                 <br />
                 <span className="font-montserrat font-medium">Interactive Map Placeholder</span>
                 <br />

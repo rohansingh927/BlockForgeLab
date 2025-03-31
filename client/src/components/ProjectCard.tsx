@@ -13,7 +13,7 @@ interface ProjectCardProps {
 
 const ProjectCard = ({ project }: ProjectCardProps) => {
   return (
-    <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+    <div className="bg-black rounded-lg shadow-lg overflow-hidden">
       <div className="relative">
         <img 
           src={project.image} 
@@ -33,11 +33,11 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
         </motion.div>
       </div>
       <div className="p-6">
-        <span className="bg-primary bg-opacity-10 text-primary px-3 py-1 rounded-full text-sm font-medium">
+        <span className="bg-primary bg-opacity-10 text-white px-3 py-1 rounded-full text-sm font-medium">
           {project.category}
         </span>
-        <h3 className="font-montserrat font-bold text-xl mt-4 mb-2">{project.title}</h3>
-        <p className="text-gray-600">{project.description}</p>
+        <h3 className="font-montserrat font-bold text-xl mt-4 mb-2 text-white">{project.title}</h3>
+        <p className="text-gray-300">{project.description}</p>
       </div>
     </div>
   );

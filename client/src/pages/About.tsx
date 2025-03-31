@@ -100,7 +100,7 @@ const About = () => {
               transition={{ duration: 0.6 }}
             >
               <div className="w-16 h-16 rounded-full bg-primary bg-opacity-10 flex items-center justify-center mb-6">
-                <i className="fas fa-flag text-primary text-2xl"></i>
+                <i className="fas fa-flag text-white text-2xl"></i>
               </div>
               <h3 className="font-montserrat font-bold text-2xl mb-4">Our Mission</h3>
               <p className="text-gray-600 text-lg">
@@ -116,7 +116,7 @@ const About = () => {
               transition={{ duration: 0.6 }}
             >
               <div className="w-16 h-16 rounded-full bg-primary bg-opacity-10 flex items-center justify-center mb-6">
-                <i className="fas fa-eye text-primary text-2xl"></i>
+                <i className="fas fa-eye text-white text-2xl"></i>
               </div>
               <h3 className="font-montserrat font-bold text-2xl mb-4">Our Vision</h3>
               <p className="text-gray-600 text-lg">
@@ -175,7 +175,7 @@ const About = () => {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
                 <div className="w-16 h-16 rounded-full bg-primary bg-opacity-10 flex items-center justify-center mb-6 mx-auto">
-                  <i className={`${value.icon} text-primary text-2xl`}></i>
+                  <i className={`${value.icon} text-white text-2xl`}></i>
                 </div>
                 <h3 className="font-montserrat font-bold text-xl mb-3">{value.title}</h3>
                 <p className="text-gray-600">

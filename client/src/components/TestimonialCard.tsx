@@ -14,7 +14,7 @@ interface TestimonialCardProps {
 const TestimonialCard = ({ testimonial }: TestimonialCardProps) => {
   return (
     <motion.div 
-      className="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-8 shadow-lg"
+      className="bg-black bg-opacity-90 backdrop-blur-sm rounded-lg p-8 shadow-lg"
       whileHover={{ y: -5 }}
     >
       <div className="flex items-center mb-6">
@@ -26,14 +26,14 @@ const TestimonialCard = ({ testimonial }: TestimonialCardProps) => {
           />
         </div>
         <div>
-          <h4 className="font-montserrat font-bold text-xl">{testimonial.name}</h4>
-          <p className="opacity-80">{testimonial.position}, {testimonial.company}</p>
+          <h4 className="font-montserrat font-bold text-xl text-white">{testimonial.name}</h4>
+          <p className="text-white opacity-80">{testimonial.position}, {testimonial.company}</p>
         </div>
       </div>
-      <p className="text-lg opacity-90 mb-4">
+      <p className="text-lg text-white opacity-90 mb-4">
         "{testimonial.content}"
       </p>
-      <div className="flex text-secondary">
+      <div className="flex text-white">
         {Array.from({ length: testimonial.rating }).map((_, index) => (
           <i key={index} className="fas fa-star"></i>
         ))}
